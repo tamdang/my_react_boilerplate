@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 module.exports = {
   entry: './app/index.js',
   output: {
@@ -9,4 +10,11 @@ module.exports = {
     ]
   },
   mode: 'development',
+  devServer: {
+    publicPath: '/dist',
+    hot: true,
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 }

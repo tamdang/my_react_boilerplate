@@ -1,5 +1,5 @@
 import React from 'react'
 const DisplayerPresentation = ({value}) => (
-  <span>{value}</span>
+  <span>Counter value: {value}</span>
 )
 export default DisplayerPresentation
