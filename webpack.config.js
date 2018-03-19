@@ -2,7 +2,7 @@ const webpack = require('webpack')
 module.exports = {
   entry: './app/index.js',
   output: {
-    filename: 'bundle.js'
+    filename: './dist/bundle.js'
   },
   module: {
     rules: [
@@ -11,7 +11,6 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
-    publicPath: '/dist',
     hot: true,
   },
   plugins: [
