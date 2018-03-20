@@ -9,17 +9,17 @@ const initState = {value: 0, offset: 1}
 
 // Case reducer
 function increase(state, action) {
-  return Object.assign({},state,{value: state.value + state.offset})
+  return {...state, value: state.value + state.offset}
 }
 
 // Case reducer
 function decrease(state, action) {
-  return Object.assign({},state,{value: state.value - state.offset})
+  return {state, value: state.value - state.offset}
 }
 
 function updateOffset(state, action){
   const {offset} = action.payload
-  return Object.assign({},state,{offset: parseInt(offset)})
+  return {state, offset: parseInt(offset)}
 }
 
 // Slice reducer
