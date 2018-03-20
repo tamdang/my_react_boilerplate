@@ -14,12 +14,12 @@ function increase(state, action) {
 
 // Case reducer
 function decrease(state, action) {
-  return {state, value: state.value - state.offset}
+  return {...state, value: state.value - state.offset}
 }
 
 function updateOffset(state, action){
   const {offset} = action.payload
-  return {state, offset: parseInt(offset)}
+  return {...state, offset: parseInt(offset)}
 }
 
 // Slice reducer
